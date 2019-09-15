@@ -47,9 +47,9 @@ def get_filters():
     day = 0
     while True:
         try:
-            choice1 = input("Would you like to filter the data by month, day, or not at all? Please enter 'none' for no filter: ")  
-            if choice1.lower() in options:
-                print("We will filter data by : {}".format(choice1.capitalize()))
+            user_choice = input("Would you like to filter the data by month, day, or not at all? Please enter 'none' for no filter: ")  
+            if user_choice.lower() in options:
+                print("We will filter data by : {}".format(user_choice.capitalize()))
                 break
             else: 
                 print("Please enter a valid value: Please enter if you Would like to filter the data by month, day, or not at all? Please enter 'none' for no filter: ")
@@ -59,7 +59,7 @@ def get_filters():
             
     while True:
         try:
-            if choice1.lower() == 'month':
+            if user_choice.lower() == 'month':
                 try:
                     month_choice = input("Which month - january, february, march, april, may, or june?: ")
                     if month_choice.lower() in month1:
@@ -73,7 +73,7 @@ def get_filters():
                     print("enter valid value")
                     continue
 
-            elif choice1.lower() == 'day':
+            elif user_choice.lower() == 'day':
                 try:
                     day_choice = input("Which day - Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday?: ")
                     if day_choice.capitalize() in weekday:
@@ -87,7 +87,7 @@ def get_filters():
                     print("enter valid value")
                     continue
 
-            elif choice1 == 'none':
+            elif user_choice == 'none':
                 print("We will not filter the data")
                 break
 
