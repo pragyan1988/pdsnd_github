@@ -7,7 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 month1 = ['january','february','march','april','may','june']   
-day1 = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']   
+weekday = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']   
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -76,7 +76,7 @@ def get_filters():
             elif choice1.lower() == 'day':
                 try:
                     day_choice = input("Which day - Sunday, Monday, Tuesday, Wednesday, Thursday, Friday or Saturday?: ")
-                    if day_choice.capitalize() in day1:
+                    if day_choice.capitalize() in weekday:
                         day = day_choice
                         print("We will filter the data by {}".format(day.capitalize()))
                         break
